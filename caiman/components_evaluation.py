@@ -245,7 +245,7 @@ def classify_components_ep(Y, A, C, b, f, Athresh=0.1, Npeaks=5, tB=-3, tA=10, t
                                 'correlation calculation might be unreliable.')
 
             indexes = np.array(list(indexes)).astype(np.int)
-            px = np.where(atemp > 0.06)[0]
+            px = np.where(atemp > 0.03)[0]
             if px.size < 3:
                 logging.warning('Component {0} is almost empty. '.format(i) + 'Space correlation is set to 0.')
                 rval[i] = 0
